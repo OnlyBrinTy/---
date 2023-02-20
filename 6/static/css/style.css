@@ -1,0 +1,21 @@
+.text {
+    margin: 1vh;
+    font-size: 2vw;
+    color: rgb(0, 60, 120);
+}
+
+.rb {
+    background-color: #A9A9A9;
+}
+
+.rg {
+    background-color: #b3ffb3;
+}
+
+.ry {
+    background-color: #ffffb3;
+}
+
+.rr {
+    background-color: #ffc6b3;
+}
