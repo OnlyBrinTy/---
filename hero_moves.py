@@ -27,7 +27,7 @@ def load_image(name, colorkey=None):
 
 
 def load_level(filename):
-    filename = "data/" + filename
+    filename = "data/maps/" + filename
     # читаем уровень, убирая символы перевода строки
     with open(filename, 'r') as mapFile:
         level_map = [line.strip() for line in mapFile]
@@ -135,8 +135,8 @@ class App:
             pygame.display.update()
             self.clock.tick(self.fps)
 
-    def run(self):
-        self.generate_level(load_level('map1.txt'))
+    def run(self, map_path):
+        self.generate_level(load_level(f'{map_path}.txt'))
         self.camera.update()
 
         while True:
@@ -163,6 +163,8 @@ class App:
 
 
 if __name__ == '__main__':
+    map_name = input('Выберите уровень: 1, 2 или 3 --> ').rstrip('.txt')
+
     app = App()
     app.start_screen()
-    app.run()
+    app.run(map_name)
