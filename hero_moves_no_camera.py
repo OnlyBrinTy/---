@@ -26,7 +26,7 @@ def load_image(name, colorkey=None):
 
 
 def load_level(filename):
-    filename = "data/" + filename
+    filename = "data/maps/" + filename
     # читаем уровень, убирая символы перевода строки
     with open(filename, 'r') as mapFile:
         level_map = [line.strip() for line in mapFile]
@@ -117,7 +117,7 @@ class App:
             self.clock.tick(self.fps)
 
     def run(self):
-        self.generate_level(load_level('map1.txt'))
+        self.generate_level(load_level('1.txt'))
 
         while True:
             for event in pygame.event.get():
