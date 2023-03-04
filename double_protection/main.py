@@ -1,19 +1,13 @@
 import os
 from flask import Flask, render_template, redirect
 from flask_wtf import FlaskForm
+from loginform import LoginForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 
-my_secret = os.environ['KEY']
+my_secret = 'yandex_secret_key'
 app = Flask(__name__)
 app.config['SECRET_KEY'] = my_secret
-
-
-class LoginForm(FlaskForm):
-    username = StringField('Логин', validators=[DataRequired()])
-    password = PasswordField('Пароль', validators=[DataRequired()])
-    remember_me = BooleanField('Запомнить меня')
-    submit = SubmitField('Войти')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -33,4 +27,4 @@ def success():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(port=8080, host='127.0.0.1')
