@@ -2,13 +2,12 @@
 
 {% block content %}
 
-    {% if prof == 'doctor' or prof == 'teacher' %}
+    {% if 'engineer' in prof or 'builder' in prof or 'инженер' in prof or 'строитель' in prof %}
+        <h2>Инженерные тренажеры</h2>
+       <img src="/static/image/MARS-2-1.png">
+    {% else %}
         <h2>Научные симуляторы</h2>
         <img src="/static/image/MARS-2-2.png">
-
-    {% else %}
-       <h2>Инженерные тренажеры</h2>
-       <img src="/static/image/MARS-2-1.png">
     {% endif %}
 
 {% endblock %}
