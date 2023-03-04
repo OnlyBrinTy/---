@@ -25,7 +25,7 @@ def index1(title):
 
 @app.route('/training/<prof>')
 def training(prof):
-    return render_template('training.html', title1='training', prof=prof)
+    return render_template('auto_answer.html', title1='training', prof=prof)
 
 
 

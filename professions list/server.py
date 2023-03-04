@@ -21,7 +21,7 @@ def index1(title):
 
 @app.route('/list_prof/<list_type>')
 def training(list_type):
-    return render_template('training.html', title1='training', profs=professions, list_type=list_type)
+    return render_template('auto_answer.html', title1='training', profs=professions, list_type=list_type)
 
 
 if __name__ == '__main__':
