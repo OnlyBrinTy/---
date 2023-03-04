@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Список профессий</h2>
+    {% if list_type in ('ul', 'ol') %}
+        <{{ list_type }}>
+            {% for prof in profs %}
+                <li>{{ prof }}</li>
+            {% endfor %}
+        </{{ list_type }}>
+    {% else %}
+        <h1>Ошибка! Неправильный тип списка.</h1>
+    {% endif %}
+{% endblock %}
