@@ -13,10 +13,9 @@ def get_size(toponym):
     return delta1, delta2
 
 
-def do_request():
+def do_request(toponym_to_find=" ".join(sys.argv[1:])):
     '''запуск через командную строку python search.py Москва, ул. Ак. Королева, 12
     возвращает параметры для статик карты'''
-    toponym_to_find = " ".join(sys.argv[1:])
 
     geocoder_api_server = "http://geocode-maps.yandex.ru/1.x/"
 
